@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    
+{% endblock %}
+
+{% block main %}
+
+<form action="/" method="GET">
+<link rel="modulepreload" href="https://unpkg.com/@splinetool/runtime@1.8.2/build/runtime.js">
+<style>
+    html, body {
+        height: 100%;
+    }
+    body {
+        margin: 0;
+        overflow: hidden;
+        background: rgba(0,0,0,1);
+        /* disables highlighting on mobile */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+    }
+    canvas {
+        outline: none;
+        display: block;
+    }
+    .centerer{
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        position: fixed;
+        width:100vw;
+        height: 100vh;
+    }
+    @media (min-width:801px){
+        .centerer{
+            margin-top: -50px;
+        }
+    }
+</style>
+<div class="centerer">
+    <canvas id="canvas3d"></canvas>
+</div>
+<script src="/static/dashboard-js.js" type="module"></script>
+</form>
+{% endblock %}
