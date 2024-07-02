@@ -12,3 +12,10 @@ def dashboard():
         return render_template('dashboard.html')
     else:
         return render_template('dashboard.html')
+
+@app.route('/theme')
+def theme():
+    if request.method == 'GET':
+        return render_template('theme.html')
+    else:
+        return render_template('theme.html')
