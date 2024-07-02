@@ -19,3 +19,8 @@ def theme():
         return render_template('theme.html')
     else:
         return render_template('theme.html')
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
